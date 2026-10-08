@@ -228,3 +228,7 @@ This project is released under the [MIT License](LICENSE).
 ---
 
 <p align="center">VibeSearchBench · Rednote-Hilab &amp; Unipat AI</p>
+
+### Compatible search endpoints
+
+Support any Serper.dev-compatible endpoint (like litescrape.com, serpbase.dev, serpensapi.org, and others). Set `SERPER_BASE_URL` to the provider base URL without `/search` and use its API key. The existing Serper endpoint remains the default.

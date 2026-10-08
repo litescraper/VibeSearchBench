@@ -51,8 +51,9 @@ async def _retry(
 # Serper search
 # ============================================================================
 
-_SERPER_SEARCH_URL = "https://google.serper.dev/search"
-_SERPER_SCHOLAR_URL = "https://google.serper.dev/scholar"
+_SERPER_BASE_URL = (os.environ.get("SERPER_BASE_URL") or "https://google.serper.dev").rstrip("/")
+_SERPER_SEARCH_URL = f"{_SERPER_BASE_URL}/search"
+_SERPER_SCHOLAR_URL = f"{_SERPER_BASE_URL}/scholar"
 _SERPER_SCRAPE_URL = "https://scrape.serper.dev/"
 
 # Shown to the agent when scrape fails or page content is inaccessible
